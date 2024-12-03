@@ -54,7 +54,7 @@ describe('Agify.io API Tests', () => {
       });
     });
   
-    it.only('Should be able to test Case Sensitivity of the API', () => {
+    it('Should be able to test Case Sensitivity of the API', () => {
         const name = 'BillyBob';
         cy.request(`${baseUrl}/?name=${name}`).then((response) => {
           expect(response.status).to.eq(200);
