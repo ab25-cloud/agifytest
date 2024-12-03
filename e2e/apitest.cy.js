@@ -4,7 +4,7 @@ describe('Agify.io API Tests', () => {
     const baseUrl = 'https://api.agify.io';
   
     it('Should fetch age and count for a valid name', () => {
-      const name = 'basit';
+      const name = 'billybob';
       cy.request(`${baseUrl}/?name=${name}`).then((response) => {
         expect(response.status).to.eq(200);
         expect(response.body).to.have.property('name', name);
